@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "declarationDir": "dist",
+
+    "rootDir": "src",
+
     "target": "ESNext",
     "module": "NodeNext",
     "useDefineForClassFields": true,
@@ -19,5 +23,5 @@
     "declaration": true
     // "sourceMap": true
   },
-  "include": ["src/**/*"]
+  "include": ["src"]
 }

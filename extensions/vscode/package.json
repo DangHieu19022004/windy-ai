@@ -1,8 +1,10 @@
 {
-  "name": "continue",
+  "name": "windy-ai",
   "icon": "media/icon.png",
-  "author": "Continue Dev, Inc",
-  "version": "1.1.17",
+  "author": "TDH, Continue Dev, Inc",
+  "version": "1.0.0",
+  "displayName": "Windy AI",
+  "description": "customized AI programming assistant",
   "repository": {
     "type": "git",
     "url": "https://github.com/continuedev/continue"
@@ -18,9 +20,7 @@
   "homepage": "https://continue.dev",
   "qna": "https://github.com/continuedev/continue/issues/new/choose",
   "license": "Apache-2.0",
-  "displayName": "Continue - Codestral, Claude, and more",
   "pricing": "Free",
-  "description": "The leading open-source AI code assistant",
   "publisher": "Continue",
   "engines": {
     "vscode": "^1.70.0",
@@ -630,6 +630,8 @@
     "vscode-extension-tester": "^8.10.0"
   },
   "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.778.0",
+    "@continuedev/core": "file:../../core/continuedev-core-1.1.0.tgz",
     "@continuedev/fetch": "^1.0.3",
     "@electron/rebuild": "^3.2.10",
     "@reduxjs/toolkit": "^1.9.3",

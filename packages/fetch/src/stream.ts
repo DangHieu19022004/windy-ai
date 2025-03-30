@@ -1,10 +1,25 @@
+import { Buffer } from "buffer";
+import { ReadableStream } from "stream/web";
+
 export async function* toAsyncIterable(
   nodeReadable: NodeJS.ReadableStream,
 ): AsyncGenerator<Uint8Array> {
   for await (const chunk of nodeReadable) {
-    yield chunk as Uint8Array;
+    if (chunk instanceof Uint8Array) {
+      yield chunk;
+    } else if (typeof chunk === "string") {
+      yield new TextEncoder().encode(chunk);
+    } else {
+      // Convert unknown chunk to Buffer, then copy safely into ArrayBuffer
+      const buf = Buffer.from(chunk as ArrayBufferLike);
+      const copy = new Uint8Array(buf.byteLength);
+      buf.copy(copy, 0, 0, buf.byteLength);
+      yield copy;
+    }
   }
 }
+
+
 
 export async function* streamResponse(
   response: Response,

@@ -1,14 +1,14 @@
 <div align="center">
 
-![Continue logo](media/readme.png)
+![Windy AI logo](media/readme.png)
 
 </div>
 
-<h1 align="center">Continue</h1>
+<h1 align="center">Windy AI - Trợ lý Lập trình Cá nhân Hóa</h1>
 
 <div align="center">
 
-**[Continue](https://docs.continue.dev) enables developers to create, share, and use custom AI code assistants with our open-source [VS Code](https://marketplace.visualstudio.com/items?itemName=Continue.continue) and [JetBrains](https://plugins.jetbrains.com/plugin/22707-continue-extension) extensions and [hub of models, rules, prompts, docs, and other building blocks](https://hub.continue.dev)**
+**Windy AI là một trợ lý AI mã nguồn mở giúp lập trình viên tăng tốc công việc, được xây dựng dựa trên Continue**
 
 </div>
 
@@ -18,48 +18,78 @@
     <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" style="height: 22px;" />
 </a>
 <a target="_blank" href="https://docs.continue.dev" style="background:none">
-    <img src="https://img.shields.io/badge/continue_docs-%23BE1B55" style="height: 22px;" />
+    <img src="https://img.shields.io/badge/windy_docs-%23BE1B55" style="height: 22px;" />
 </a>
 <a target="_blank" href="https://discord.gg/vapESyrFmJ" style="background:none">
-    <img src="https://img.shields.io/badge/discord-join-continue.svg?labelColor=191937&color=6F6FF7&logo=discord" style="height: 22px;" />
+    <img src="https://img.shields.io/badge/discord-join-windy.svg?labelColor=191937&color=6F6FF7&logo=discord" style="height: 22px;" />
 </a>
 
 <p></p>
 
-## Chat
+## Tính năng chính
 
-[Chat](https://continue.dev/docs/chat/how-to-use-it) makes it easy to ask for help from an LLM without needing to leave the IDE
+### 💬 Chat
+Hỏi AI ngay trong IDE với ngữ cảnh mã nguồn hiện tại
 
 ![chat](docs/static/img/chat.gif)
 
-## Autocomplete
-
-[Autocomplete](https://continue.dev/docs/autocomplete/how-to-use-it) provides inline code suggestions as you type
+### ✨ Autocomplete
+Gợi ý mã ngay khi bạn đang gõ
 
 ![autocomplete](docs/static/img/autocomplete.gif)
 
-## Edit
-
-[Edit](https://continue.dev/docs/edit/how-to-use-it) is a convenient way to modify code without leaving your current file
+### 🛠️ Edit
+Yêu cầu AI sửa đoạn code hiện tại bằng lệnh ngắn gọn
 
 ![edit](docs/static/img/edit.gif)
 
-## Actions
-
-[Actions](https://continue.dev/docs/actions/how-to-use-it) are shortcuts for common use cases
+### ⚡ Actions
+Tập hợp các lệnh thường dùng để tương tác nhanh với AI
 
 ![actions](docs/static/img/actions.gif)
 
 </div>
 
-## Getting Started
+---
 
-Learn about how to install and use Continue in the docs [here](https://continue.dev/docs/getting-started/install)
+## 🚀 Hướng dẫn cài đặt Windy AI
 
-## Contributing
+### 1. Clone dự án từ GitHub
 
-Check out the [contribution ideas board](https://github.com/orgs/continuedev/projects/2), read the [contributing guide](https://github.com/continuedev/continue/blob/main/CONTRIBUTING.md), and join [#contribute on Discord](https://discord.gg/vapESyrFmJ)
+```bash
+git clone https://github.com/ten-ban/windy-ai.git
+cd windy-ai/extensions/vscode
+```
 
-## License
+> Hãy chắc chắn bạn đã cài Node.js >= 20.11.0 trước khi thực hiện các bước tiếp theo.
 
-[Apache 2.0 © 2023-2024 Continue Dev, Inc.](./LICENSE)
+### 2. Cài đặt gói phụ thuộc và build extension
+
+```bash
+npm install
+npx vsce package
+```
+
+Lệnh trên sẽ tạo file `windy-ai-1.1.17.vsix` trong thư mục hiện tại.
+
+### 3. Cài đặt vào VS Code
+
+#### Thực hiện các bước sau:
+
+1. Mở **Visual Studio Code**
+2. Nhấn `Ctrl + Shift + P`, chọn `Extensions: Install from VSIX`
+3. Chọn file `windy-ai-1.1.17.vsix`
+4. Chờ cài đặt và khởi động lại VSCode nếu được yêu cầu
+
+---
+
+## 🧪 Kiểm tra sau khi cài đặt
+
+- Mở thanh sidebar, bạn sẽ thấy icon hoặc tab **Windy AI**
+- Hoặc mở Command Palette (`Ctrl + Shift + P`) và gõ "Windy"
+
+---
+
+## Đóng góp
+
+Bạn có thể fork dự án và gửi pull request. Hãy cùng nhau cải tiến Windy AI để phù hợp hơn với nhu cầu của cộng đồng!
